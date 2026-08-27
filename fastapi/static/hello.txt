@@ -1,0 +1,1 @@
+Este arquivo esta sendo servido via app.mount("/static", StaticFiles(...)).
