@@ -28,6 +28,8 @@ class LoggingMiddleware(AgentMiddleware):
         print(f"[LoggingMiddleware] Chamada #{self.call_count} ao modelo -> iniciando")
 
         response = handler(request)
+        print(f"[LoggingMiddleware] Request: {request}")
+        print(f"[LoggingMiddleware] Response: {response}")
 
         print(f"[LoggingMiddleware] Chamada #{self.call_count} ao modelo -> concluida")
         return response
