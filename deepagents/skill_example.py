@@ -11,16 +11,14 @@ pedido do usuario combina com a descricao.
 import sys
 from pathlib import Path
 
-from dotenv import load_dotenv
-
-sys.stdout.reconfigure(encoding="utf-8")
-from langchain_openai import ChatOpenAI
-
-from deepagents import create_deep_agent
 from deepagents.backends.filesystem import FilesystemBackend
-
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 from tools import search_web
 
+from deepagents import create_deep_agent
+
+sys.stdout.reconfigure(encoding="utf-8")
 load_dotenv()
 
 ROOT_DIR = Path(__file__).parent

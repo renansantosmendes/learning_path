@@ -7,11 +7,15 @@ do agente.
 """
 
 from dotenv import load_dotenv
-from langchain.agents.middleware.types import AgentMiddleware, ModelRequest, ModelResponse
+from langchain.agents.middleware.types import (
+    AgentMiddleware,
+    ModelRequest,
+    ModelResponse,
+)
 from langchain_openai import ChatOpenAI
-from deepagents import create_deep_agent
-
 from tools import search_web
+
+from deepagents import create_deep_agent
 
 load_dotenv()
 
@@ -62,7 +66,8 @@ def main():
     for message in result["messages"]:
         message.pretty_print()
 
-    print(f"\nTotal de chamadas ao modelo registradas pelo middleware: {logging_middleware.call_count}")
+    total_calls = logging_middleware.call_count
+    print(f"\nTotal de chamadas ao modelo registradas pelo middleware: {total_calls}")
 
 
 if __name__ == "__main__":

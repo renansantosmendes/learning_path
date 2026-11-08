@@ -4,3 +4,8 @@ deepagents
 langchain-openai
 langchain-tavily
 python-dotenv
+yfinance==1.5.1
+pandas==2.3.1
+pandas-ta-classic==0.8.32
+empyrical-reloaded==0.7.0
+python-bcb==0.4.0

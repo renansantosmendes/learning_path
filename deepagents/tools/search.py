@@ -1,3 +1,5 @@
+"""Web search tool backed by Tavily, used for market news."""
+
 from typing import Any
 
 from dotenv import load_dotenv
@@ -70,7 +72,7 @@ def _format_images(images: list[Any]) -> str:
 
 
 def search_web(query: str) -> str:
-    """Busca na web via Tavily e retorna resposta, resultados e imagens.
+    """Searches the web with Tavily and returns answer, results and images.
 
     Parameters
     ----------

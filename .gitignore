@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local outputs of the market analysis agent
+deepagents/logs/
+deepagents/draft.json
+deepagents/draft.json.tmp
